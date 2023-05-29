@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Euclid-Regular";
+    src: url("../assets/fonts/Euclid-Circular-B-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Euclid-Medium";
+    src: url("../assets/fonts/Euclid-Circular-B-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Euclid-Bold";
+    src: url("../assets/fonts/Euclid-Circular-B-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Euclid-Light";
+    src: url("../assets/fonts/Euclid-Circular-B-Light.ttf");
+}
+
+@font-face {
+    font-family: "Euclid-Semibold";
+    src: url("../assets/Euclid-Circular-B-SemiBold.ttf");
+}
