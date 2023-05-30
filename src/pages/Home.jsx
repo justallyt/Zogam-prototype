@@ -1,10 +1,10 @@
-import Header from "../components/Header"
+import Nav from "../components/Nav/Nav"
 
 
 const Home = () => {
   return (
     <>
-        <Header />
+        <Nav />
     </>
   )
 }

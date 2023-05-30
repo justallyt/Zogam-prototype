@@ -6,7 +6,7 @@ import { AiOutlineInstagram } from "react-icons/ai"
 import { RiLinkedinBoxFill } from "react-icons/ri"
 import { SiTwitter } from "react-icons/si"
 import { CgMenuRight } from "react-icons/cg"
-import logo from "../assets/logo.png"
+import logo from "../../assets/logo.png"
 
 const Header = () => {
   return (
