@@ -1,10 +1,41 @@
 import { NavLink } from "react-router-dom"
 import logo from "../../assets/logo.png"
 import { CgClose } from "react-icons/cg"
+import { gsap } from "gsap"
+import { navContext } from "../../context/navContext"
+import { useContext, useEffect, useRef } from "react"
 const MobileNav = () => {
+    const [status, setStatus] = useContext(navContext);
+
+    const wrapRef = useRef();
+    const toggleRef = useRef();
+
+    const removeMenu = () => setStatus(false);
+    useEffect(()=>{
+            const realWrap = wrapRef.current;
+            const toggleWrap = toggleRef.current;
+
+            if(status){
+                  realWrap.classList.add("active");
+
+                  gsap.to(toggleWrap, {
+                         rotationY: 0,
+                         duration: 0.5,
+                         opacity: 1
+                  })
+            }else{
+                  gsap.to(toggleWrap, {
+                        rotationY: '35deg',
+                        opacity: 0,
+                        duration: 0.5
+                  })    
+
+                  setTimeout(() => { realWrap.classList.remove('active') }, 600)
+            }
+    }, [status])
   return (
-    <div className="mobile-nav-wrapper">
-             <div className="wrapper-inner">
+    <div className="mobile-nav-wrapper" ref={wrapRef}>
+             <div className="wrapper-inner" ref={toggleRef}>
                       <div className="navigation-side">
                                <ul>
                                        <ul>
@@ -24,9 +55,24 @@ const MobileNav = () => {
                                                          <img src={logo} alt="" />
                                                  </div>
                                         </NavLink>
-                                        <div className="toggle-mobile">
+                                        <div className="toggle-mobile" onClick={removeMenu}>
                                                 <span><CgClose /></span>
                                         </div>
+                                 </div>
+
+                                 <div className="information-specifics">
+                                           <div className="specific-row">
+                                                   <p>Location</p>
+                                                   <h2>PRJQ+R64, Chai Raod, Pangani Nairobi</h2>
+                                           </div>
+                                           <div className="specific-row">
+                                                  <p>Call Us</p>
+                                                  <h2>+(254)-7123-45678</h2>
+                                           </div>
+                                           <div className="specific-row">
+                                                   <p>Email Us</p>
+                                                   <h2>info@example.com</h2>
+                                           </div>
                                  </div>
                       </div>
              </div>

@@ -7,8 +7,14 @@ import { RiLinkedinBoxFill } from "react-icons/ri"
 import { SiTwitter } from "react-icons/si"
 import { CgMenuRight } from "react-icons/cg"
 import logo from "../../assets/logo.png"
+import { useContext } from "react"
+import { navContext } from "../../context/navContext"
 
 const Header = () => {
+   const [status, setStatus] = useContext(navContext)
+
+   const toggleBtn = () => setStatus(!status);
+
   return (
     <div className="header-wrapper">
             <div className="topbar">
@@ -69,7 +75,7 @@ const Header = () => {
                                                              <h3>+254-7123-45678</h3>
                                                     </div>
                                            </div>
-                                           <div className="toggle-btn">
+                                           <div className="toggle-btn" onClick={toggleBtn}>
                                                     <span><CgMenuRight /></span>
                                            </div>
                                  </div>

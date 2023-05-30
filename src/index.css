@@ -11,6 +11,7 @@
 }
 body{
      font-family: "Euclid-Regular", sans-serif;
+     
 }
 
 ul{
@@ -190,19 +191,36 @@ img{
 
 /* Mobile Navigation */
 .mobile-nav-wrapper{
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      perspective: 400px;
+      z-index: -10;
       background: var(--whitish-color);
+      overflow: hidden;
 }
-
+.mobile-nav-wrapper.active{
+     z-index: 90;
+}
 .wrapper-inner{
+    opacity: 0;
     width: 90%;
     margin: auto;
+    background: var(--whitish-color);
     display: grid;
     grid-template-columns: 3fr 2fr;
+    transform: rotateY(30deg);
+    -webkit-transform: rotateY(30deg);
+    -moz-transform: rotateY(30deg);
+    -ms-transform: rotateY(30deg);
+    -o-transform: rotateY(30deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 .navigation-side{
     padding-top: 80px;
@@ -219,6 +237,83 @@ img{
     font-family:  "Euclid-Medium";
     color: #444;
 }
+
+.navigation-description{
+     padding: 10% 10% 15% 10%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+.information-head{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.information-head .logo{
+     width: 180px;
+}
+.information-head .toggle-mobile{
+     width: 50px;
+     height: 50px;
+     border: 1px solid var(--dull-black-color);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50px;
+     -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+     -ms-border-radius: 50px;
+     -o-border-radius: 50px;
+     cursor: pointer;
+}
+.toggle-mobile span{
+     display: flex;
+     font-size: 22px;
+     color: #444;
+}
+
+.information-specifics .specific-row{
+     margin-bottom: 30px;
+}
+.specific-row p{
+    font-size: 18px;
+    color: var(--dull-color);
+    margin-bottom: 10px;
+}
+.specific-row h2{
+    font-size: 25px;
+    font-family: "Euclid-Light";
+    line-height: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
