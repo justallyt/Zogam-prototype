@@ -4,17 +4,64 @@
      background: var(--whitish-color);
 }
 
-.slides-container,
-.slides-container .slide-moja{
+.slides-container{
+      position: relative;
       width: 100%;
       height: 100%;
 }
+.slides-container .slide-moja{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      will-change: opacity;
+}
+.slides-container .slide-moja.prev{
+         z-index: 3;
+         opacity: 0;
+         transition: 1s cubic-bezier(0.694, 0, 0.335, 1);
+}
+.slides-container .slide-moja.active{
+         z-index: 10;
+         opacity: 1;
+         transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
+         -webkit-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
+         -moz-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
+         -ms-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
+         -o-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
+}
 
-.slide-moja{
+.slides-container .slide-moja:not(.prev):not(.active){
+         z-index: -1;
+         opacity: 0.3;
+}
+
+.hero-wrapper.prev .slide-moja.prev{
+        opacity: 0;
+        z-index: 3;
+}
+.hero-wrapper.prev .slide-moja:not(.prev):not(.active){
+         z-index: -1;
+         opacity: 0.3;
+}
+.slide-moja:nth-child(1){
      background: url("../assets/landing1.jpg") no-repeat;
      background-size: cover;
      background-position: center;
 }
+.slide-moja:nth-child(2){
+     background: url("../assets/landing2.jpg") no-repeat;
+     background-size: cover;
+     background-position: center;
+}
+.slide-moja:nth-child(3){
+     background: url("../assets/landing3.jpg") no-repeat;
+     background-size: cover;
+     background-position: center;
+     opacity: 0;
+}
+
 .slide-moja .slide-moja-inner{
       height: inherit;
       width: 1280px;

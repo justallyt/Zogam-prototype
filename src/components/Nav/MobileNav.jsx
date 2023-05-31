@@ -6,10 +6,10 @@ import { navContext } from "../../context/navContext"
 import { useContext, useEffect, useRef } from "react"
 const MobileNav = () => {
     const [status, setStatus] = useContext(navContext);
-
+   
     const wrapRef = useRef();
     const toggleRef = useRef();
-
+   
     const removeMenu = () => setStatus(false);
     useEffect(()=>{
             const realWrap = wrapRef.current;
