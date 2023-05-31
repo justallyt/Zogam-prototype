@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-     --main-color: rgb(0, 119, 255);
+     --main-color: rgb(0, 143, 226);
      --dull-color: rgb(100, 100, 100);
      --dull-black-color: rgba(206, 206, 206, 0.656);
      --whitish-color: rgb(244, 247, 248);
@@ -54,6 +54,9 @@ img{
     width: 1450px;
     margin: auto;
 }
+.header-wrapper{
+      background: white;
+}
 .header-wrapper .topbar{
     border-bottom: 1px solid var(--dull-black-color);
 }
@@ -95,6 +98,7 @@ img{
      font-size: 14px;
      display: flex;
      padding-right: 40px;;
+     color: var(--dull-color);
 }
 .right-side .socials {
     display: flex;
@@ -140,10 +144,46 @@ img{
      gap: 30px;
 }
 .header-content nav ul li a{
+      display: block;
       color: #444;
       font-size: 15px;
+      position: relative;
+      line-height: 85px;
 }
-
+.header-content nav ul li a::after{
+     content: "";
+     width: 100%;
+     height: 2px;
+     background: var(--main-color);
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     border-radius: 20px;
+     -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+     -ms-border-radius: 20px;
+     -o-border-radius: 20px;
+     transform: translateY(10px);
+     -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+     -ms-transform: translateY(10px);
+     -o-transform: translateY(10px);
+     transition: all 0.5s ease;
+     -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -ms-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+     opacity: 0;
+}
+.header-content nav ul li a:hover::after,
+.header-content nav ul li a.active::after{
+       opacity: 1;
+       transform: translateY(0);
+       -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+       -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+}
 .header-content .support-edge{
     display: flex;
     align-items: center;
@@ -322,4 +362,29 @@ img{
     .header-content .header-content-inner{
           width: 95%;
     }
+}
+
+@media (max-width: 1090px) {
+     .left-side .location,
+     .right-side .socials{
+          width: auto;
+          border:none;
+     }
+     .right-side{
+         padding-bottom: 10px;
+     }
+     .header-wrapper .topbar .topbar-inner{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+     }
+     .header-content nav{
+          display: none;
+     }
+}
+
+@media(max-width: 768px){
+        .support-edge .contacts{
+              display: none;
+        }
 }

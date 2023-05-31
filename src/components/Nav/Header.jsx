@@ -60,11 +60,11 @@ const Header = () => {
                                  <nav>
                                        <ul>
                                              <li><NavLink to={'/'}>Home</NavLink></li>
-                                             <li><NavLink to={'/'}>About</NavLink></li>
-                                             <li><NavLink to={'/'}>Services</NavLink></li>
-                                             <li><NavLink to={'/'}>Portfolio</NavLink></li>
-                                             <li><NavLink to={'/'}>Articles</NavLink></li>
-                                             <li><NavLink to={'/'}>Contact Us</NavLink></li>
+                                             <li><NavLink to={'/about'}>About</NavLink></li>
+                                             <li><NavLink to={'/services'}>Services</NavLink></li>
+                                             <li><NavLink to={'/portfolio'}>Portfolio</NavLink></li>
+                                             <li><NavLink to={'/articles'}>Articles</NavLink></li>
+                                             <li><NavLink to={'/contact'}>Contact Us</NavLink></li>
                                        </ul>
                                  </nav>
 

@@ -1,0 +1,86 @@
+.hero-wrapper{
+     width: 100%;
+     height: 100vh;
+     background: var(--whitish-color);
+}
+
+.slides-container,
+.slides-container .slide-moja{
+      width: 100%;
+      height: 100%;
+}
+
+.slide-moja{
+     background: url("../assets/landing1.jpg") no-repeat;
+     background-size: cover;
+     background-position: center;
+}
+.slide-moja .slide-moja-inner{
+      height: inherit;
+      width: 1280px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+}
+.slide-moja .slide-texts {
+    width: 800px;
+}
+.slide-moja .slide-texts h1{
+    font-size: 80px;
+    font-family: "Euclid-Bold";
+    line-height: 90px;
+}
+.slide-moja .slide-texts h1 span{
+     color: var(--main-color);
+}
+.slide-moja .slide-texts p{
+    font-size: 18px;
+    margin: 20px 0;
+    width: 70%;
+    line-height: 30px;
+}
+.slide-moja .slide-texts .hero-btn a{
+     width: 200px;
+     display: flex;
+     height: 55px;
+     background: var(--main-color);
+     border-radius: 6px;
+     -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+     -ms-border-radius: 6px;
+     -o-border-radius: 6px;
+     color: white;
+     justify-content: center;
+     align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spacer{
+     padding: 200px 0;
+}
