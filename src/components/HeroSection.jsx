@@ -1,12 +1,17 @@
 import { NavLink } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { ImPlay3 } from "react-icons/im"
 import "swiper/css";
 import "swiper/css/effect-fade";
+import 'swiper/css/navigation';
 
 import { Autoplay, EffectFade } from "swiper";
+import {  useState } from "react";
 const HeroSection = () => {
+   const [swiperRef, setSwiperRef] = useState(null)
 
+   const prevHandler = () => swiperRef.slidePrev();
+   const nextHandler = () => swiperRef.slideNext()
   return (
     <div className="hero-wrapper">
            <div className="slides-container">
@@ -19,6 +24,13 @@ const HeroSection = () => {
                                 delay: 3500,
                                 disableOnInteraction: false
                           }}
+                          on={{
+                                slideChange: function(){
+                                          let current = this.activeIndex + 1;
+                                          console.log(current)
+                                }
+                          } }
+                        onSwiper={(swiper) => setSwiperRef(swiper) }
                           modules={[Autoplay, EffectFade]}
                      >
                                <SwiperSlide>
@@ -32,6 +44,9 @@ const HeroSection = () => {
                                                                 <div className="hero-btn">
                                                                         <NavLink to={'/contact'}>Get in Touch</NavLink>
                                                                 </div>
+                                                        </div>
+                                                        <div className="video-btn">
+                                                                 <span><ImPlay3 /></span>
                                                         </div>
                                                  </div>
                                          </div>
@@ -49,6 +64,9 @@ const HeroSection = () => {
                                                                         <NavLink to={'/contact'}>Get in Touch</NavLink>
                                                                 </div>
                                                           </div>
+                                                          <div className="video-btn">
+                                                                 <span><ImPlay3 /></span>
+                                                         </div>
                                               </div>
                                         </div>
                                 )}
@@ -65,19 +83,23 @@ const HeroSection = () => {
                                                                          <NavLink to={'/contact'}>Get in Touch</NavLink>
                                                                  </div>
                                                            </div>
+                                                           <div className="video-btn">
+                                                                     <span><ImPlay3 /></span>
+                                                            </div>
                                                </div>
                                        </div>
                                 )}
                                </SwiperSlide>
                      </Swiper>
-                   
-
-                   
-                   <nav id="slider-nav">
-                       <span className="current">01</span>
-                     <span className="sep"></span>
-                     <span className="total">04</span>
-                  </nav>
+                     <div className="activity-box">
+                                  <div className="left-btn" onClick={prevHandler}>
+                                             <p>Prev</p>
+                                  </div>
+                                  <div className="indicator"><h2>1 / 3</h2></div>
+                                  <div className="right-btn" onClick={nextHandler}>
+                                               <p>Right</p>
+                                  </div>
+                     </div>
            </div>
     </div>
   )
