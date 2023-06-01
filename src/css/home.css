@@ -9,57 +9,24 @@
       width: 100%;
       height: 100%;
 }
-.slides-container .slide-moja{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      will-change: opacity;
-}
-.slides-container .slide-moja.prev{
-         z-index: 3;
-         opacity: 0;
-         transition: 1s cubic-bezier(0.694, 0, 0.335, 1);
-}
-.slides-container .slide-moja.active{
-         z-index: 10;
-         opacity: 1;
-         transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
-         -webkit-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
-         -moz-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
-         -ms-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
-         -o-transition: all 1s cubic-bezier(0.694,0,0,0.335, 1);
+.slide-moja{
+      height: 100vh;
 }
 
-.slides-container .slide-moja:not(.prev):not(.active){
-         z-index: -1;
-         opacity: 0.3;
-}
-
-.hero-wrapper.prev .slide-moja.prev{
-        opacity: 0;
-        z-index: 3;
-}
-.hero-wrapper.prev .slide-moja:not(.prev):not(.active){
-         z-index: -1;
-         opacity: 0.3;
-}
-.slide-moja:nth-child(1){
+.slide-moja.one{
      background: url("../assets/landing1.jpg") no-repeat;
      background-size: cover;
      background-position: center;
 }
-.slide-moja:nth-child(2){
+.slide-moja.two{
      background: url("../assets/landing2.jpg") no-repeat;
      background-size: cover;
      background-position: center;
 }
-.slide-moja:nth-child(3){
+.slide-moja.three{
      background: url("../assets/landing3.jpg") no-repeat;
      background-size: cover;
      background-position: center;
-     opacity: 0;
 }
 
 .slide-moja .slide-moja-inner{
@@ -70,12 +37,36 @@
       align-items: center;
 }
 .slide-moja .slide-texts {
-    width: 800px;
+    width: 750px;
+    opacity: 0;
+}
+.slide-moja .slide-texts.active{
+       opacity: 1;
 }
 .slide-moja .slide-texts h1{
     font-size: 80px;
     font-family: "Euclid-Bold";
     line-height: 90px;
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.slide-moja .slide-texts.active h1,
+.slide-moja .slide-texts.active p{
+       transform: translateY(0);
+       -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+       -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+       opacity: 1;
 }
 .slide-moja .slide-texts h1 span{
      color: var(--main-color);
@@ -85,6 +76,25 @@
     margin: 20px 0;
     width: 70%;
     line-height: 30px;
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    opacity: 0;
+    transition: all 1.3s ease;
+    -webkit-transition: all 1.3s ease;
+    -moz-transition: all 1.3s ease;
+    -ms-transition: all 1.3s ease;
+    -o-transition: all 1.3s ease;
+}
+.slide-moja .slide-texts.active p{
+     transform: translateY(0);
+     -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+     -ms-transform: translateY(0);
+     -o-transform: translateY(0);
+     opacity: 1;
 }
 .slide-moja .slide-texts .hero-btn a{
      width: 200px;
@@ -99,8 +109,26 @@
      color: white;
      justify-content: center;
      align-items: center;
+     transform: translateY(100px);
+     -webkit-transform: translateY(100px);
+     -moz-transform: translateY(100px);
+     -ms-transform: translateY(100px);
+     -o-transform: translateY(100px);
+     opacity: 0;
+     transition: all 1.6s ease;
+     -webkit-transition: all 1.6s ease;
+     -moz-transition: all 1.6s ease;
+     -ms-transition: all 1.6s ease;
+     -o-transition: all 1.6s ease;
 }
-
+.slide-moja .slide-texts.active .hero-btn a{
+     transform: translateY(0);
+     -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+     -ms-transform: translateY(0);
+     -o-transform: translateY(0);
+     opacity: 1;
+}
 
 
 
