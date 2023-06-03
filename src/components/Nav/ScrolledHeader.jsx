@@ -16,8 +16,10 @@ const ScrolledHeader = () => {
                setScrolled(false)
          }
     })
+
+    console.log(scrolled)
   return (
-    <div className={scrolled ? "header-wrapper scrolled show" : "header-wrapper scrolled hide"}>
+    <div className={scrolled ? "header-wrapper  show" : "header-wrapper  hide"}>
          <div className="header-content">
                        <div className="header-content-inner">
                                  <div className="logo">
