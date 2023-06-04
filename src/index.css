@@ -262,7 +262,7 @@ img{
 
 /* Mobile Navigation */
 .mobile-nav-wrapper{
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -273,7 +273,7 @@ img{
       overflow: hidden;
 }
 .mobile-nav-wrapper.active{
-     z-index: 90;
+     z-index: 200;
 }
 .wrapper-inner{
     opacity: 0;

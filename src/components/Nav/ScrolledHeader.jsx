@@ -17,7 +17,6 @@ const ScrolledHeader = () => {
          }
     })
 
-    console.log(scrolled)
   return (
     <div className={scrolled ? "header-wrapper  show" : "header-wrapper  hide"}>
          <div className="header-content">

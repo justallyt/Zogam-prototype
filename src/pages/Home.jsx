@@ -1,3 +1,4 @@
+import AboutSection from "../components/AboutSection"
 import HeroSection from "../components/HeroSection"
 import Nav from "../components/Nav/Nav"
 import "../css/home.css"
@@ -7,7 +8,7 @@ const Home = () => {
     <>
         <Nav />
         <HeroSection />
-        <div className="spacer"></div>
+        <AboutSection />
     </>
   )
 }
