@@ -39,7 +39,7 @@
       justify-content: space-between;
 }
 .slide-moja .slide-texts {
-    width: 750px;
+    width: 700px;
     opacity: 0;
 }
 .slide-moja .slide-texts.active{
@@ -235,16 +235,20 @@
 /* About Section */
 .about-section{
      padding: 120px 0;
+     background: url("../assets/bg-1.png") no-repeat;
+     background-position: right bottom;
 }
 
 .about-section-content{
       display: grid;
       grid-template-columns: repeat(2,1fr);
       gap: 80px;
+      place-items: center;
 }
 .images-column .images-column-row{
      display: grid;
      grid-template-columns: repeat(2,1fr);
+    
 }
 .images-column img:nth-child(1){
        width: 80%;
@@ -329,4 +333,85 @@
 .about-description-column a:hover{
        background: var(--main-color);
        gap: 7px;
+}
+
+.images-column .squigly-boxes{
+       width: 100px;
+       height: 100px;
+       margin: 20px  0 0 15%;
+       display: grid;
+       grid-template-columns: 2fr 1fr;
+       gap: 10px;
+       place-items: center;
+}
+
+.squigly-boxes .squigly-column .box1{
+     width: 30px;
+     height: 30px;
+     background: rgb(235, 238, 240);
+}
+.squigly-boxes .squigly-column{
+     display: flex;
+     gap: 10px;
+     flex-direction: column;
+     align-items: flex-end;
+}
+.squigly-boxes .squigly-column .box2{
+       width: 50px;
+       height: 50px;
+       background: var(--main-color);
+}
+.squigly-boxes .box3{
+       width: 40px;
+       height: 40px;
+       background: black;
+}
+
+/* Services Version */
+.services-section{
+      padding: 100px 0;
+      background: white;
+}
+
+
+
+@media(max-width: 1480px){
+     .slide-moja .slide-moja-inner{
+             width: 90%;
+     }
+}
+
+@media(max-width: 1090px){
+       .slide-moja .slide-texts h1{
+             font-size: 65px;
+             line-height: 75px;
+       }
+       .slide-moja .slide-texts p{
+             width: 90%;
+       }
+      .about-section-content{
+            grid-template-columns: repeat(1,1fr);
+      }
+   
+}
+
+@media(max-width: 768px){
+       .images-column img:nth-child(2){
+              height: auto;
+       }
+       .slide-moja .slide-texts{
+            width: 100%;
+       }
+       .about-description-column h1{
+             font-size: 50px;
+       }
+}
+@media(max-width: 500px){
+     .slide-moja .slide-texts h1{
+           font-size: 50px;
+           line-height: 60px;
+     }
+     .slide-moja .video-btn{
+          display: none;
+     }
 }

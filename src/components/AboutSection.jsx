@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import civil1 from "../assets/civil1.jpg"
 import civil2 from "../assets/civil2.jpg"
 import { BsArrowRight } from 'react-icons/bs'
+
 const AboutSection = () => {
   return (
     <div className="about-section">
@@ -11,6 +12,13 @@ const AboutSection = () => {
                                                 <div className="images-column-row">
                                                             <img src={civil1} alt="" />
                                                             <img src={civil2} alt="" />
+                                                </div>
+                                                <div className="squigly-boxes">
+                                                          <div className="squigly-column">
+                                                                     <div className="box1"></div>
+                                                                     <div className="box2"></div>
+                                                          </div>
+                                                          <div className="box3"></div>
                                                 </div>
                                     </div>
                                     <div className="about-description-column">

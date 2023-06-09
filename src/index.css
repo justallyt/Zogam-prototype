@@ -50,7 +50,8 @@ img{
 }
 
 .header-wrapper-inner,
-.header-content-inner{
+.header-content-inner,
+.inner-row-2{
     width: 1450px;
     margin: auto;
 }
@@ -392,6 +393,9 @@ img{
     .header-wrapper .topbar .topbar-inner,
     .header-content .header-content-inner{
           width: 95%;
+    }
+    .inner-row{
+          width: 90%
     }
 }
 
